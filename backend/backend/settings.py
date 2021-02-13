@@ -122,7 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# added as we want to get output even when trailing slash is nt present in url
 APPEND_SLASH=False
+
 # we whitelist localhost:3000 because that's where frontend will be served
 CORS_ORIGIN_WHITELIST = (
      'http://localhost:3000',
