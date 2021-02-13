@@ -6,5 +6,6 @@ cd backend
 
 # Setup DB or any other environment variables you want to setup.
 
-
-python manage.py runserver 8081
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver 8081
