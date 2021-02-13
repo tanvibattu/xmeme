@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+.top-navbar{
+  background-color:rgb(206, 23, 23);
+}
+.navbar-name{
+  color:white;
+}
+ /*  to split the screen in half */
+ .split {  
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* left part of screen for posting meme */
+.left {
+  height: 100%;
+  width: 40%;
+  left: 0;
+  background-color:#111;
+}
+
+/* right part of meme for showing meme */
+.right {
+  height: 100%;
+  width: 60%;
+  right: 0;
+  background-color:rgb(224, 158, 14);
+  overflow-y:scroll;
+}
+
+.left .centered{
+  padding:20%;
+  vertical-align: center;
+}
+
+.right .centered {
+  padding:10%;
+  text-align: center;
+  align-items: center;
+}
+
+.centered img {
+  height:20%;
+  border-radius: 10%;
+
+} 
+
+.listmemecards{
+  width:90%;
+  padding:20px;
+  margin:5%;
+}
+
