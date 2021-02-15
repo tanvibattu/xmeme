@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+verify_ssl = true
+url = "https://pypi.org/simple"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+gunicorn="20.0.4"
+dj-database-url="*"
+whitenoise="*"
+
+
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
+
