@@ -28,6 +28,7 @@ SECRET_KEY = 'd5l9$cvduqzpici^hyfmo)=4i6e5rpj+zs2h3u60*phrfd=k(8'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -46,7 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
- 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',    # add this
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,9 +57,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'backend.urls'
-
+# axios.defaults.withCredentials = true;
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -145,9 +146,11 @@ STATIC_URL = '/static/'
 APPEND_SLASH=False
 
 # we whitelist localhost:3000 because that's where frontend will be served
-CORS_ORIGIN_WHITELIST = (
+CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
-)
+     'https://xmeme-tanvi-backend.herokuapp.com'
+     'https://xmeme-tanvi-website.herokuapp.com'
+]
 
 
 STATIC_ROOT =os.path.join(BASE_DIR,'static')

@@ -47,7 +47,7 @@ class EditForm extends React.Component {
             name="caption"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.caption)}
-            required  minLength={5}
+            required  minLength={4}
           />
         </FormGroup>
         <FormGroup>
